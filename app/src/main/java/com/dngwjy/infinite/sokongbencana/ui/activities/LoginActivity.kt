@@ -47,7 +47,7 @@ var isLogin=true
         preferences.isLogged=true
     }
     fun addUserRole(){
-
+        preferences.userRole="Role"
     }
     fun checkLogged(){
         when(preferences.isLogged){
