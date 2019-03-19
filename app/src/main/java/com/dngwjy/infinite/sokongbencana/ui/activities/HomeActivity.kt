@@ -26,7 +26,9 @@ class HomeActivity : BaseActivity(),Observer<LiveDataState> {
     override fun networkConnect(connected: Boolean) {
         super.networkConnect(connected)
         when(connected){
+
             true->poskoViewModel.getPosko()
+
         }
     }
     override fun onCreate(savedInstanceState: Bundle?) {

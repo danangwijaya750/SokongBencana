@@ -9,6 +9,7 @@ class Preferences(private val context: Context) {
     companion object {
         private const val LOGGEDIN= "logged"
         private const val USER_ID = "user"
+        private const val USER_ROLE="role"
     }
 
     @RequiresApi(Build.VERSION_CODES.N)
@@ -21,4 +22,8 @@ class Preferences(private val context: Context) {
     var isLogged=preferences.getBoolean(LOGGEDIN,false)
     @RequiresApi(Build.VERSION_CODES.N)
     set(value) = preferences.edit().putBoolean(LOGGEDIN,value).apply()
+    @RequiresApi(Build.VERSION_CODES.N)
+    var userRole=preferences.getString(USER_ROLE,"")
+    @RequiresApi(Build.VERSION_CODES.N)
+    set(value) = preferences.edit().putString(USER_ROLE,value).apply()
 }
